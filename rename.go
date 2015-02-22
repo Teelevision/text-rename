@@ -17,8 +17,8 @@ var s = struct {
 	pathesFileName string // file name of the file containing the file pathes
 	renameFilesPath string // where to put the names and pathes file. if empty, it tries to figure it out
 } {
-	namesFileName: "_names.txt",
-	pathesFileName: "_pathes",
+	namesFileName: "_names.text-rename.txt",
+	pathesFileName: "_pathes.text-rename.txt",
 	renameFilesPath: "",
 }
 
