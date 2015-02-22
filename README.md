@@ -26,4 +26,4 @@ Renaming files under Windows gives me a hard time. I need search and replace, re
 
 ## License ##
 
-import "LICENSE"
+MIT License. See "LICENSE" file.
