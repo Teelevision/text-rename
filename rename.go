@@ -29,7 +29,24 @@ func main() {
 	pathesFilePath := ""
 	
 	/* prepare pathes */
-	pathes := os.Args[1:]
+	/* figure out the absolut file pathes */
+	pathes := make([]string, 0)
+	for _, path := range os.Args[1:] {
+		if absolutePath, err := filepath.Abs(path); err == nil {
+			if _, err := os.Stat(absolutePath); err == nil {
+				/* valid absolute path */
+				pathes = append(pathes, absolutePath)
+			} else {
+				/* no valid file */
+				fmt.Println("Skipping:", path)
+				fmt.Println(err)
+			}
+		} else {
+			/* could not get absolute path */
+			fmt.Println("Skipping:", path)
+		}
+	}
+	// fmt.Println("Pathes:", len(pathes), pathes)
 	
 	/* check for names and pathes files */
 	for _, path := range pathes {

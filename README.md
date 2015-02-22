@@ -9,7 +9,7 @@ Rename files using your text editor.
 
 ## How it works ##
 
-The program creates two files: one containing the file names and one containing their original path. The matching is done by the line number
+The program creates (and overwrites) two files: one containing the file names and one containing their original path. The matching is done by the line number. After the renaming the two created files are deleted.
 
 ## Compatibility ##
 
